@@ -162,10 +162,11 @@ public class DetectFieldTypes {
 				FieldType newField = null;
 				int prec = detectTextPrecision(uniqueColumnValues);
 				BigDecimal bd = detectNumeric(columnValues);
-				if(bd!=null && (uniqueColumnValues.size() == (rowCount-1)) && bd.scale() == 0 && !uniqueColumnFound)
-				{	
-					bd = null; //this is a Numeric uniqueId therefore treat is Text/Dim
-				}
+				
+				// if(bd!=null && (uniqueColumnValues.size() == (rowCount-1)) && bd.scale() == 0 && !uniqueColumnFound)
+				// {	
+				// 	bd = null; //this is a Numeric uniqueId therefore treat is Text/Dim
+				// }
 				
 				if(bd!=null)
 				{
